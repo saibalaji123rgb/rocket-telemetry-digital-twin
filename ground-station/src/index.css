@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #050814;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(13, 21, 43, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(8, 145, 178, 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.9) 0px, transparent 50%);
+    color: #F8FAFC;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  /* Mission Control Futuristic Glass Panels */
+  .panel-glass {
+    background: rgba(13, 21, 43, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .panel-glass-interactive {
+    background: rgba(13, 21, 43, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .panel-glass-interactive:hover {
+    border-color: rgba(0, 240, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.12), 0 0 15px rgba(0, 240, 255, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .panel-base {
+    background-color: #0c1327;
+    border: 1px solid #1e293b;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-base {
+    background-color: #111b33;
+    border: 1px solid rgba(51, 65, 85, 0.7);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-base:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 4px 20px -2px rgba(0, 240, 255, 0.15);
+  }
+
+  .input-base {
+    background-color: #060a17;
+    border: 1px solid #1e293b;
+    color: #F8FAFC;
+    transition: all 0.2s ease;
+  }
+
+  .input-base:focus {
+    outline: none;
+    border-color: #00F0FF;
+    box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.2);
+  }
+
+  /* Typography Text Glows */
+  .glow-text-cyan {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.2);
+  }
+
+  .glow-text-emerald {
+    text-shadow: 0 0 10px rgba(0, 230, 118, 0.6), 0 0 20px rgba(0, 230, 118, 0.2);
+  }
+
+  .glow-text-amber {
+    text-shadow: 0 0 10px rgba(255, 183, 3, 0.6);
+  }
+
+  .glow-text-red {
+    text-shadow: 0 0 10px rgba(255, 46, 147, 0.7);
+  }
+
+  .glow-box-cyan {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 15px rgba(0, 240, 255, 0.1);
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-orbitron-num {
+    font-family: 'Orbitron', sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Telemetry Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050814;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+  box-shadow: 0 0 10px #00F0FF;
+}
+
+/* HUD Grid Background Pattern */
+.bg-hud-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
